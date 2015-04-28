@@ -27,11 +27,8 @@ $wgExtensionCredits['parserhook'][] = array(
     // The name of the extension, which will appear on Special:Version.
     'name' => 'MadLib Parser Function',
     
-    // A description of the extension, which will appear on Special:Version.
-    'description' => 'A simple mad libs-style parser function extension',
-    
     // Alternatively, you can specify a message key for the description.
-    'descriptionmsg' => 'madlibextension-desc',
+    'descriptionmsg' => 'madlib-desc',
     
     // The version of the extension, which will appear on Special:Version.
     // This can be a number or a string.
