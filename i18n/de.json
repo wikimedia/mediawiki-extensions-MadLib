@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"madlib-desc": "Ergänzt die Parserfunktion <code>#madlib</code> für Mad-Libs-artigen Text"
+}
