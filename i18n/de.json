@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Purodha"
 		]
 	},
-	"madlib-desc": "Ergänzt die Parserfunktion <code>#madlib</code> für Mad-Libs-artigen Text"
+	"madlib-desc": "Fügt die Parserfunktion <code>#madlib</code> für Mad-Libs-artigen Text dem Wiki hinzu"
 }
