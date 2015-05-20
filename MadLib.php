@@ -32,7 +32,7 @@ $wgExtensionCredits['parserhook'][] = array(
     
     // The version of the extension, which will appear on Special:Version.
     // This can be a number or a string.
-    'version' => "1.0", 
+    'version' => "1.0.1", 
     
     // Your name, which will appear on Special:Version.
     'author' => 'Clark Verbrugge',
@@ -72,11 +72,13 @@ function MadLibExtensionRenderParserFunction($parser,$param1 = '',$param2 = '',$
     // first arg is the base text 
     $s = $param1;
     // second arg is a comma-separated list of tags to replace
-    $fmt = preg_split("/\s*,\s*/",$param2);
+    $fmt = preg_split("/\s*,\s*/",trim($param2));
     // third arg is optional, and is a prefix applied to the matching page names of replaced tags
     
     // do a replacement for each of the indicated madlib tags
     foreach($fmt as $f) {
+        if ($f === '')
+            continue;
         $fs = MadLibExtensionCleanPage(MadLibExtensionGetPage($param3 . $f)); // get page of texts for the given tag
         $fa = explode("\n",$fs); // line-separated values
         
@@ -196,8 +198,10 @@ function MadLibExtensionCleanPage($p) {
 // Get a page content, or empty string if page not found
 function MadLibExtensionGetPage($t) {
     $title = Title::newFromText($t);
-    $r = Revision::newFromTitle($title);
-    if(is_object($r))
-        return $r->getText();
+    if(is_object($title)) {
+        $r = Revision::newFromTitle($title);
+        if(is_object($r))
+            return $r->getText();
+    }
     return "";
 }
