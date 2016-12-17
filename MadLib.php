@@ -201,7 +201,7 @@ function MadLibExtensionGetPage($t) {
     if(is_object($title)) {
         $r = Revision::newFromTitle($title);
         if(is_object($r))
-            return $r->getText();
+            return ContentHandler::getContentText($r->getContent());
     }
     return "";
 }
