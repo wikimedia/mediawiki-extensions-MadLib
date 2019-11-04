@@ -67,7 +67,7 @@ function MadLibExtensionSetupParserFunction( &$parser ) {
 function MadLibExtensionRenderParserFunction($parser,$param1 = '',$param2 = '',$param3 = '') {
     global $wgMadLibMaxSets;
     
-    $parser->disableCache();
+    $parser->getOutput()->updateCacheExpiry( 0 );
     
     // first arg is the base text 
     $s = $param1;
