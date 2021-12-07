@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Esketti"
+			"Esketti",
+			"McDutchie"
 		]
 	},
-	"madlib-desc": "Voegt de <code>#madlib</code> parser functie voor mad libs-stijl tekst"
+	"madlib-desc": "Voegt de parserfunctie <code>#madlib</code> toe voor mad libs-achtige tekst"
 }
